@@ -20,6 +20,40 @@
             <img class="img-fluid" src="./assets/images/NY-TIMES-image.jpg" />
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Search Term:</label>
+                        <input type="search" class="form-control" id="searchTerm">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Number of Records to Retrieve</label>
+                        <select class="form-control" id="numRecords">
+                            <option>1</option>
+                            <option>3</option>
+                            <option>5</option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Start Year(optional):</label>
+                        <input type="text" class="form-control" id="startYear">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">End Year(optional):</label>
+                        <input type="text" class="form-control" id="endYear">
+                    </div>
+                    <button type="button" class="btn btn-light" id="searchbtn">Search</button>
+                    <button type="button" class="btn btn-light" id="clearbtn">Clear Results</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="app.js"></script>
 </body>
 
