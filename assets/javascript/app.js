@@ -18,7 +18,7 @@ $("#searchBtn").on("click", function() {
         // store docs in docs array
         var docsArray = result.response.docs;
 
-        for (var i = 0; i < docsArray.length; i++) {
+        for (var i = 0; i <= numRecords; i++) {
             // create an enclosing block for each article
             var elemArticle = $("<div>");
             
