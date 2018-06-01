@@ -1,10 +1,10 @@
 
 
 
-$("#searchBtn").on("click", function() {
+$("#searchbtn").on("click", function() {
 
-    var query = $("#search-input").val();
-    var numRecords = $("#num-records-input").val();
+    var query = $("#searchTerm").val();
+    var numRecords = $("#numRecords").val();
 
     var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + query + "&api-key=e7a9301ff4a845c0bad25f903a300d6e";
     console.log("query url: " + queryUrl);
@@ -36,7 +36,7 @@ $("#searchBtn").on("click", function() {
             var elemLink = $("<a>").attr("href", docsArray[i].url);
 
             // insert all elements into article element
-            elemArticle.append(elemNum, elemTitle, elemAuthor, elemSection, elemDate, elemLink);
+            elemArticle.prepend(elemNum, elemTitle, elemAuthor, elemSection, elemDate, elemLink);
 
             // insert article into top-articles div
             $('#top-articles').prepend(elemArticle);
@@ -47,5 +47,10 @@ $("#searchBtn").on("click", function() {
         throw err;
     });
 
-})
+}); // search btn handler
+
+$("#clearbtn").on("click", function() {
+    $('#top-articles').empty();
+
+});    
 
